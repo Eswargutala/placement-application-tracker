@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Placement Application Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Placement Application Tracker</h1>
+
+  <div class="form">
+    <input type="text" id="company" placeholder="Company Name">
+    <input type="text" id="role" placeholder="Role">
+
+    <select id="status">
+      <option value="Applied">Applied</option>
+      <option value="Interview">Interview</option>
+      <option value="Selected">Selected</option>
+      <option value="Rejected">Rejected</option>
+    </select>
+
+    <button onclick="addApplication()">Add</button>
+  </div>
+
+  <div class="filter">
+    <label>Filter:</label>
+    <select onchange="filterStatus(this.value)">
+      <option value="All">All</option>
+      <option value="Applied">Applied</option>
+      <option value="Interview">Interview</option>
+      <option value="Selected">Selected</option>
+      <option value="Rejected">Rejected</option>
+    </select>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
